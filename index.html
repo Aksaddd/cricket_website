@@ -169,7 +169,7 @@ h1 .struck{position:relative;white-space:nowrap}
 
 /* ---------- the shot: bat + ball animation layer ---------- */
 .shot{position:absolute;inset:0;z-index:2;width:100%;height:100%;pointer-events:none}
-#bat{transform-box:view-box;transform-origin:158px 710px;animation:swing 4.2s cubic-bezier(.45,0,.2,1) infinite}
+#bat{transform-box:view-box;transform-origin:158px 710px;animation:swing 5.2s cubic-bezier(.45,0,.2,1) infinite}
 @keyframes swing{
   0%,40%{transform:rotate(34deg)}
   54%{transform:rotate(62deg)}      /* backlift */
@@ -180,25 +180,25 @@ h1 .struck{position:relative;white-space:nowrap}
 #ball{
   offset-path:path("M 210 515 C 520 210 830 95 1190 28");
   offset-rotate:0deg; offset-distance:0%;
-  animation:fly 4.2s cubic-bezier(.16,.62,.3,1) infinite;
+  animation:fly 5.2s cubic-bezier(.16,.62,.3,1) infinite;
 }
 @keyframes fly{
   0%,60%{offset-distance:0%;opacity:1}
   62%{offset-distance:3%;opacity:1}
-  88%{offset-distance:100%;opacity:1}
-  90%{offset-distance:100%;opacity:0}
+  92%{offset-distance:100%;opacity:1}
+  94%{offset-distance:100%;opacity:0}
   100%{offset-distance:0%;opacity:0}
 }
-#ball .spin{animation:spin .5s linear infinite;transform-origin:center}
+#ball .spin{animation:spin .7s linear infinite;transform-origin:center}
 @keyframes spin{to{transform:rotate(360deg)}}
-#trail{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 4.2s cubic-bezier(.16,.62,.3,1) infinite}
-@keyframes draw{0%,60%{stroke-dashoffset:1400;opacity:0}62%{opacity:.85}88%{stroke-dashoffset:240;opacity:.85}96%,100%{stroke-dashoffset:240;opacity:0}}
-#burst{transform-box:view-box;transform-origin:210px 515px;animation:burst 4.2s linear infinite}
+#trail{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 5.2s cubic-bezier(.16,.62,.3,1) infinite}
+@keyframes draw{0%,60%{stroke-dashoffset:1400;opacity:0}62%{opacity:.85}92%{stroke-dashoffset:240;opacity:.85}96%,100%{stroke-dashoffset:240;opacity:0}}
+#burst{transform-box:view-box;transform-origin:210px 515px;animation:burst 5.2s linear infinite}
 @keyframes burst{0%,60%{opacity:0;transform:scale(.2)}61.5%{opacity:.95;transform:scale(.5)}68%{opacity:0;transform:scale(2.1)}100%{opacity:0}}
-.spark{transform-box:view-box;transform-origin:210px 515px;animation:spark 4.2s linear infinite}
+.spark{transform-box:view-box;transform-origin:210px 515px;animation:spark 5.2s linear infinite}
 @keyframes spark{0%,60%{opacity:0;transform:scale(.3)}61%{opacity:1;transform:scale(1)}66%{opacity:0;transform:scale(1.4)}100%{opacity:0}}
-.boundary{animation:rope 4.2s linear infinite}
-@keyframes rope{0%,86%{opacity:.5}89%{opacity:1;filter:drop-shadow(0 0 8px var(--gold))}94%,100%{opacity:.5;filter:none}}
+.boundary{animation:rope 5.2s linear infinite}
+@keyframes rope{0%,90%{opacity:.5}93%{opacity:1;filter:drop-shadow(0 0 8px var(--gold))}97%,100%{opacity:.5;filter:none}}
 
 /* ---------- ticker ---------- */
 .ticker{position:absolute;bottom:0;left:0;right:0;z-index:4;border-top:1px solid rgba(243,234,214,.12);
@@ -363,6 +363,12 @@ html{scroll-padding-top:90px}
       <linearGradient id="blade2" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="#efe0b6"/><stop offset="100%" stop-color="#c7a35f"/>
       </linearGradient>
+      <linearGradient id="willow" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#efe3c4"/><stop offset="45%" stop-color="#f4ecd9"/><stop offset="100%" stop-color="#cdb786"/>
+      </linearGradient>
+      <linearGradient id="grip" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#3b4047"/><stop offset="52%" stop-color="#23262b"/><stop offset="100%" stop-color="#111317"/>
+      </linearGradient>
     </defs>
 
     <!-- boundary rope -->
@@ -373,11 +379,24 @@ html{scroll-padding-top:90px}
 
     <!-- bat -->
     <g id="bat">
-      <rect x="150" y="560" width="17" height="152" rx="8" fill="#7b5a32"/>
-      <rect x="153" y="566" width="5" height="140" rx="2" fill="#5d4324" opacity=".7"/>
-      <rect x="143" y="546" width="31" height="36" rx="7" fill="#8a6a3c"/>
-      <path d="M142 446 q-5 60 7 104 h38 q12 -44 7 -104 q-27 -14 -52 0 Z" fill="url(#blade2)" stroke="#a9863f" stroke-width="2"/>
-      <rect x="166" y="456" width="3" height="98" fill="#b9925180"/>
+      <!-- dark rubber grip + knob -->
+      <rect x="149" y="699" width="20" height="16" rx="7" fill="url(#grip)"/>
+      <rect x="150" y="556" width="17" height="148" rx="8" fill="url(#grip)"/>
+      <rect x="152.5" y="562" width="3.5" height="136" rx="2" fill="#ffffff" opacity=".13"/>
+      <g stroke="#000000" stroke-opacity=".3" stroke-width="2.3" stroke-linecap="round">
+        <line x1="151" y1="582" x2="166" y2="578"/><line x1="151" y1="601" x2="166" y2="597"/><line x1="151" y1="620" x2="166" y2="616"/>
+        <line x1="151" y1="639" x2="166" y2="635"/><line x1="151" y1="658" x2="166" y2="654"/><line x1="151" y1="677" x2="166" y2="673"/>
+      </g>
+      <!-- cane splice / shoulders -->
+      <rect x="148" y="550" width="21" height="13" rx="4" fill="#d0b075"/>
+      <!-- willow blade: flat toe, long straight edges -->
+      <path d="M143 454 Q143 444 154 444 L168 444 Q179 444 179 454 L179 546 Q179 555 171 557 L151 557 Q143 555 143 546 Z" fill="url(#willow)" stroke="#b69a5e" stroke-width="1.5"/>
+      <!-- edge round-off, face highlight, willow grain -->
+      <path d="M175 456 L175 544" stroke="#b1924f" stroke-width="3" opacity=".45" stroke-linecap="round"/>
+      <rect x="150" y="456" width="16" height="92" rx="6" fill="#fff7e6" opacity=".22"/>
+      <g stroke="#c9b485" stroke-width="1" opacity=".5">
+        <line x1="152" y1="452" x2="152" y2="552"/><line x1="161" y1="448" x2="161" y2="554"/><line x1="170" y1="452" x2="170" y2="552"/>
+      </g>
     </g>
 
     <!-- impact -->
