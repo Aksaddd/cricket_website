@@ -1,0 +1,101 @@
+{
+  "_note": "Product metadata for Ramnarine Sambhudat (Shako) cricket titles. Fields verified against the physical books and public listings (Amazon, eBay, author site) as of June 2026. Items flagged 'verify' should be confirmed before publishing.",
+  "author": {
+    "full_name": "Ramnarine Sambhudat",
+    "pen_name": "Shako",
+    "origin": "Crabwood Creek, Corentyne Coast, Berbice, Guyana (South America)",
+    "bio_short": "Guyanese cricket statistician and lifelong fan of the game who compiles reference records on Test cricket.",
+    "website": "https://www.sambhudat.com",
+    "email": "ramnarine.sambhudat@frontier.com",
+    "phones": ["863-496-7257", "407-218-0867", "863-852-8678"]
+  },
+  "products": [
+    {
+      "sku": "SAMB-WI-1928-2013",
+      "title": "WI in Test Matches: Facts and Feats 1928\u20132013",
+      "title_variants": [
+        "West Indies in Test Matches, Facts and Feats, June 1928 \u2013 December 2013"
+      ],
+      "subtitle": "Facts and Feats 1928 \u2013 2013",
+      "author": "Ramnarine Sambhudat (Shako)",
+      "foreword_by": "Lance Gibbs (West Indies Test off-spinner)",
+      "edition": "2nd edition",
+      "publisher": "48HrBooks (print) / self-published",
+      "publication_year": 2014,
+      "language": "English",
+      "format": "Paperback (trade)",
+      "trim_size_in": "6 x 9",
+      "page_count": 551,
+      "illustrations": "86 black-and-white photographs",
+      "isbn_13": "978-1-62847-567-8",
+      "isbn_10": "1628475676",
+      "list_price_usd": 29.95,
+      "subject": "Sports & Recreation / Cricket",
+      "bisac_suggested": ["SPO007030 SPORTS & RECREATION / Cricket", "SPO066000 SPORTS & RECREATION / History", "REF000000 REFERENCE / General"],
+      "audience": "Cricket fans, statisticians, West Indies cricket historians, collectors",
+      "live_listings": {
+        "amazon_asin": "1628475676",
+        "amazon_url": "https://www.amazon.com/dp/1628475676",
+        "amazon_rating": "5.0 (1 review)"
+      },
+      "description": "A statistical reference on West Indies Test cricket spanning the side's first Test (vs England, June 1928) to its 2013 series in New Zealand. Compiled by Guyanese fan Ramnarine Sambhudat and forewarded by WI great Lance Gibbs, it gathers records across batting, bowling, wicket-keeping, fielding, partnerships, all-round and individual feats; WI records for and against every Test nation; all WI captains and openers; every WI cricketer from 1928\u20132013 with statistics; Guyanese and East Indian contributions to WI cricket; and every century scored by and against the West Indies. 551 pages with 86 photographs.",
+      "keywords": ["West Indies cricket", "WI Test matches", "cricket records", "cricket statistics", "facts and feats", "Lance Gibbs", "Caribbean cricket history", "cricket reference book", "Guyana cricket"],
+      "shipping_estimate": {"weight_lb_estimate": 1.9, "weight_note": "551-page 6x9 paperback; weigh one copy to confirm before setting carrier rates"}
+    },
+    {
+      "sku": "SAMB-TCR-1877-2019",
+      "title": "Test Cricket Records from March 1877 \u2013 September 2019",
+      "title_variants": ["Figures Are Fun \u2013 Test Cricket Records from March 1877 \u2013 September 2019"],
+      "tagline": "Figures Are Fun \u2014 Follow Them With",
+      "author": "Ramnarine Sambhudat (Shako)",
+      "foreword_by": "Lance Gibbs (West Indies Test off-spinner)",
+      "edition": "1st edition",
+      "publisher": "Self-published (independent; 0-578 ISBN block, typically distributed via IngramSpark) \u2014 verify",
+      "publication_year": 2019,
+      "language": "English",
+      "format": "Paperback (trade)",
+      "trim_size_in": "6 x 9",
+      "page_count": 561,
+      "isbn_13": "978-0-578-54698-8",
+      "isbn_10": "0578546981",
+      "list_price_usd": 33.90,
+      "subject": "Sports & Recreation / Cricket",
+      "bisac_suggested": ["SPO007030 SPORTS & RECREATION / Cricket", "SPO066000 SPORTS & RECREATION / History", "REF000000 REFERENCE / General"],
+      "audience": "Cricket fans worldwide, statisticians, Test cricket historians, collectors",
+      "live_listings": {
+        "ebay_seen": true,
+        "ebay_url": "https://www.ebay.com/itm/254768203020"
+      },
+      "description": "The author's second reference, broadening the lens from the West Indies to all twelve Test-playing nations across the full span of Test cricket \u2014 from the inaugural match in March 1877 to September 2019. Forewarded by Lance Gibbs, it presents records and figures nation by nation (England, Australia, South Africa, West Indies, India, New Zealand, Pakistan, Sri Lanka, Zimbabwe, Bangladesh, Afghanistan and Ireland), with each country represented by a signature player. 561 pages, 6x9.",
+      "keywords": ["Test cricket records", "cricket statistics", "cricket history 1877", "all Test nations", "cricket facts and figures", "Lance Gibbs", "cricket reference book", "cricket almanac", "Don Bradman", "Garry Sobers", "Muralitharan"],
+      "shipping_estimate": {"weight_lb_estimate": 1.9, "weight_note": "561-page 6x9 paperback; weigh one copy to confirm before setting carrier rates"}
+    }
+  ],
+  "json_ld_examples": {
+    "_usage": "Paste the matching object into a <script type=\"application/ld+json\"> tag on each product page for Google rich results. Replace url/image/availability/seller as needed.",
+    "wi_1928_2013": {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "WI in Test Matches: Facts and Feats 1928\u20132013",
+      "author": {"@type": "Person", "name": "Ramnarine Sambhudat"},
+      "isbn": "9781628475678",
+      "bookFormat": "https://schema.org/Paperback",
+      "numberOfPages": 551,
+      "inLanguage": "en",
+      "genre": "Cricket / Sports Reference",
+      "offers": {"@type": "Offer", "price": "29.95", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
+    },
+    "test_cricket_records_1877_2019": {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Test Cricket Records from March 1877 \u2013 September 2019",
+      "author": {"@type": "Person", "name": "Ramnarine Sambhudat"},
+      "isbn": "9780578546988",
+      "bookFormat": "https://schema.org/Paperback",
+      "numberOfPages": 561,
+      "inLanguage": "en",
+      "genre": "Cricket / Sports Reference",
+      "offers": {"@type": "Offer", "price": "33.90", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
+    }
+  }
+}
