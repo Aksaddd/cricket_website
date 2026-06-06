@@ -276,6 +276,13 @@ img{max-width:100%}
 .price{font-family:var(--display);font-size:1.7rem;color:var(--gold-2);line-height:1}
 .rating{margin-top:16px;font-size:.88rem;color:var(--bone-dim)}
 .rating b{color:var(--gold-2);letter-spacing:.1em}
+.rating a{color:var(--gold-2);text-decoration:underline;text-underline-offset:3px}
+.rating a:hover{color:var(--gold)}
+/* post-checkout toast */
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,160%);z-index:60;
+  background:var(--gold);color:var(--ink);font-weight:600;font-size:.95rem;padding:14px 24px;border-radius:999px;
+  box-shadow:0 18px 44px -12px rgba(0,0,0,.6);transition:transform .55s cubic-bezier(.2,.7,.2,1);max-width:92vw;text-align:center}
+.toast.show{transform:translate(-50%,0)}
 
 /* ---------- about (light editorial panel) ---------- */
 .about{background:var(--bone);color:var(--ink)}
@@ -457,10 +464,10 @@ html{scroll-padding-top:90px}
         </ul>
         <div class="buy">
           <span class="price">$29.95</span>
-          <a class="btn btn-primary" href="https://www.amazon.com/dp/1628475676" target="_blank" rel="noopener">Buy on Amazon ↗</a>
+          <a class="btn btn-primary buy-now" data-book="wi" data-fallback="https://www.amazon.com/dp/1628475676" href="https://www.amazon.com/dp/1628475676" rel="noopener">Buy now &rarr;</a>
           <a class="btn btn-ghost" href="mailto:ramnarine.sambhudat@frontier.com?subject=Book%20order%3A%20WI%20in%20Test%20Matches%201928-2013&body=Hi%20Shako%2C%0A%0AI%27d%20like%20to%20order%201%20copy%20of%20WI%20in%20Test%20Matches%20(%2429.95).%0A%0AName%3A%0AShipping%20address%3A">Order direct</a>
         </div>
-        <p class="rating"><b>★★★★★</b> 5.0 on Amazon</p>
+        <p class="rating"><b>★★★★★</b> 5.0 on <a href="https://www.amazon.com/dp/1628475676" target="_blank" rel="noopener">Amazon</a></p>
       </div>
     </article>
 
@@ -494,10 +501,10 @@ html{scroll-padding-top:90px}
         </ul>
         <div class="buy">
           <span class="price">$33.90</span>
-          <a class="btn btn-primary" href="https://www.ebay.com/itm/254768203020" target="_blank" rel="noopener">Find on eBay ↗</a>
+          <a class="btn btn-primary buy-now" data-book="tcr" data-fallback="https://www.ebay.com/itm/254768203020" href="https://www.ebay.com/itm/254768203020" rel="noopener">Buy now &rarr;</a>
           <a class="btn btn-ghost" href="mailto:ramnarine.sambhudat@frontier.com?subject=Book%20order%3A%20Test%20Cricket%20Records%201877-2019&body=Hi%20Shako%2C%0A%0AI%27d%20like%20to%20order%201%20copy%20of%20Test%20Cricket%20Records%20(%2433.90).%0A%0AName%3A%0AShipping%20address%3A">Order direct</a>
         </div>
-        <p class="rating">Independently published · forewarded by a West Indies legend</p>
+        <p class="rating">Independently published · also <a href="https://www.ebay.com/itm/254768203020" target="_blank" rel="noopener">on eBay</a></p>
       </div>
     </article>
   </div>
@@ -572,6 +579,31 @@ html{scroll-padding-top:90px}
 
 <script>
 (function(){
+  // ---------- Stripe payments ----------
+  // Paste your Stripe Payment Link URLs below to switch on hosted checkout.
+  // Create one per book at https://dashboard.stripe.com/payment-links
+  // (turn on shipping-address collection; set the post-payment redirect to
+  //  https://YOUR-DOMAIN/?checkout=success). Until these are filled in, the
+  //  "Buy now" buttons safely fall back to the existing marketplace listings.
+  var STRIPE_LINKS = {
+    wi:  "",   // WI in Test Matches   — $29.95
+    tcr: ""    // Test Cricket Records — $33.90
+  };
+  document.querySelectorAll('.buy-now').forEach(function(b){
+    var url = STRIPE_LINKS[b.dataset.book];
+    if(url){ b.href = url; }                            // hosted Stripe Checkout (same tab)
+    else { b.target = "_blank"; b.rel = "noopener"; }  // marketplace fallback (new tab)
+  });
+  // Post-checkout thank-you (shown when Stripe redirects back with ?checkout=success)
+  if(/[?&]checkout=success/.test(location.search)){
+    var t = document.createElement('div');
+    t.className = 'toast';
+    t.textContent = '✓ Thank you! Your order is confirmed — a receipt is on its way by email.';
+    document.body.appendChild(t);
+    setTimeout(function(){ t.classList.add('show'); }, 60);
+    setTimeout(function(){ t.classList.remove('show'); }, 7000);
+  }
+
   // Cover gallery — swap the main image when a thumbnail is chosen
   document.querySelectorAll('.gallery').forEach(function(g){
     var img = g.querySelector('.cover-main img');

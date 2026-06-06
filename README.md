@@ -39,6 +39,37 @@ required. After deploying, replace `https://www.sambhudat.com/` in `index.html`
 (canonical + Open Graph + JSON-LD), `robots.txt`, and `sitemap.xml` with the
 real domain.
 
+## Payments (Stripe)
+
+Checkout uses **Stripe Payment Links** — hosted by Stripe, so no card data and
+no API keys ever touch this site. Turning it on is two steps:
+
+1. In the [Stripe dashboard → Payment Links](https://dashboard.stripe.com/payment-links),
+   create one link per book:
+   - **WI in Test Matches** — $29.95
+   - **Test Cricket Records** — $33.90
+
+   For each link, turn on **shipping address collection**, optionally enable
+   **Stripe Tax**, add a shipping rate, and (optional) set the after-payment
+   behaviour to **redirect** to `https://YOUR-DOMAIN/?checkout=success` — the
+   page shows a thank-you toast when it sees that parameter.
+
+2. Paste the two URLs into the `STRIPE_LINKS` config near the bottom of
+   `index.html`:
+
+   ```js
+   var STRIPE_LINKS = {
+     wi:  "https://buy.stripe.com/xxxxxxxx",   // WI in Test Matches
+     tcr: "https://buy.stripe.com/yyyyyyyy"    // Test Cricket Records
+   };
+   ```
+
+That's it — the "Buy now" buttons immediately switch from the marketplace
+fallback to hosted Stripe checkout. (Prefer a custom `/api/checkout` serverless
+function with the Stripe SDK instead? That's the alternative in
+`website_action_plan.md`; Payment Links are the lower-maintenance choice for two
+SKUs.)
+
 ## Sections
 
 - **Hero** — animated, respects `prefers-reduced-motion`, dims on mobile.
@@ -49,10 +80,10 @@ real domain.
 
 ## Decisions made for this quick first cut
 
-- **Buy buttons** link to the existing live listings — **Amazon** for *WI in
-  Test Matches* and **eBay** for *Test Cricket Records* — with an "Order direct"
-  `mailto:` as the secondary action. Swap these for **Stripe Checkout** when
-  ready (see `website_action_plan.md`).
+- **Buy buttons** use hosted **Stripe Payment Links** (see *Payments* above).
+  Until the two links are pasted in, they fall back to the live **Amazon** /
+  **eBay** listings so checkout is never dead. "Order direct" `mailto:` remains
+  as a secondary option.
 - **Contact** is consolidated to one email + one phone (per the catalog sheet's
   recommendation). Confirm/replace these before launch if a dedicated business
   line is preferred.
