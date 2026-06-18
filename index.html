@@ -313,6 +313,47 @@ img{max-width:100%}
 .ccard .v{margin-top:10px;font-size:1.02rem;color:var(--bone);word-break:break-word}
 .ccard .v a:hover{color:var(--gold-2)}
 
+/* ---------- inside the book ---------- */
+.inside{background:linear-gradient(180deg,var(--pitch-3),var(--pitch-2))}
+.foreword-quote{position:relative;max-width:64em;margin:40px auto 0;
+  padding:clamp(28px,4vw,48px);background:rgba(243,234,214,.04);
+  border:1px solid rgba(243,234,214,.12);border-radius:18px}
+.foreword-quote .fq-mark{position:absolute;top:-8px;left:22px;font-family:var(--display);
+  font-size:5rem;color:var(--gold);opacity:.5;line-height:1}
+.foreword-quote blockquote p{color:var(--bone-dim);line-height:1.72;font-size:1.02rem;margin-top:16px}
+.foreword-quote blockquote p:first-child{margin-top:0}
+.foreword-quote figcaption{margin-top:24px;font-family:var(--display);font-style:italic;
+  color:var(--bone);font-size:1.2rem}
+.foreword-quote figcaption span{display:block;font-family:var(--body);font-style:normal;
+  font-size:.8rem;letter-spacing:.04em;color:var(--gold-2);margin-top:5px}
+
+.inside-block{margin-top:clamp(48px,7vw,86px)}
+.inside-h{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,2rem);color:var(--bone)}
+.inside-lead{margin-top:12px;color:var(--bone-dim);max-width:48em;line-height:1.6}
+.inside-foot{margin-top:24px;color:var(--bone-dim);font-size:.92rem;font-style:italic}
+
+.cover-legend{list-style:none;margin-top:28px;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:14px}
+.cover-legend li{background:rgba(243,234,214,.04);border:1px solid rgba(243,234,214,.12);
+  border-radius:14px;padding:18px 20px;transition:border-color .25s,transform .25s}
+.cover-legend li:hover{border-color:rgba(217,169,76,.4);transform:translateY(-3px)}
+.cl-flag{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2)}
+.cl-flag em{font-style:normal;color:var(--bone-dim);letter-spacing:.06em}
+.cl-player{display:block;margin-top:9px;font-family:var(--display);font-size:1.16rem;color:var(--bone)}
+.cl-note{display:block;margin-top:6px;font-size:.88rem;color:var(--bone-dim);line-height:1.5}
+
+.toc{margin-top:26px;columns:2;column-gap:52px}
+@media(max-width:720px){.toc{columns:1}}
+.toc-row{break-inside:avoid;display:flex;align-items:baseline;gap:8px;
+  padding:7px 0;font-size:.92rem;color:var(--bone-dim)}
+.toc-row .t{color:var(--bone)}
+.toc-row .leader{flex:1;border-bottom:1px dotted rgba(243,234,214,.26);transform:translateY(-3px)}
+.toc-row .pg{color:var(--gold-2);font-variant-numeric:tabular-nums}
+.toc-row.toc-head{margin-top:16px;break-after:avoid}
+.toc-row.toc-head .t{font-family:var(--display);color:var(--gold-2);font-size:1.02rem}
+.toc-row.toc-head:first-child{margin-top:0}
+
 /* ---------- footer ---------- */
 footer{background:var(--pitch-2);border-top:1px solid rgba(243,234,214,.12);
   padding:clamp(48px,6vw,72px) clamp(20px,5vw,64px) 40px}
@@ -345,6 +386,7 @@ html{scroll-padding-top:90px}
     </a>
     <div class="navlinks">
       <a class="lk" href="#books">The Books</a>
+      <a class="lk" href="#inside">Inside</a>
       <a class="lk" href="#about">About Shako</a>
       <a class="lk" href="#contact">Contact</a>
       <a class="btn btn-primary" href="#books">Shop&nbsp;→</a>
@@ -530,6 +572,147 @@ html{scroll-padding-top:90px}
 </section>
 
 
+<!-- ===================== INSIDE THE BOOK ===================== -->
+<section class="section inside" id="inside">
+  <div class="container">
+    <span class="eyebrow-2 fade"><span class="dot"></span> Inside · Test Cricket Records 1877–2019</span>
+    <h2 class="fade">A look between the covers.</h2>
+    <p class="sub fade">A foreword from a West Indies great, the story behind the cover, and the full run of chapters — 561 pages of Test cricket, from the very first match to September 2019.</p>
+    <div class="head-rule fade"></div>
+
+    <!-- Foreword by Lance Gibbs -->
+    <figure class="foreword-quote fade">
+      <span class="fq-mark" aria-hidden="true">“</span>
+      <blockquote>
+        <p>My friends and fellow cricket lovers, let me introduce to you another book by Mr. Sambhudat, his second — <em>Test Cricket Records from March 1877 – September 2019</em>. As you all know, I have forewarded his first book, <em>West Indies in Test Matches, Facts and Feats, June 1928 – December 2013</em>. For those who are interested in the statistical department of Test cricket, these two books are a must for you. Cricket, as we all know, is a game about facts and figures, and I know most cricket fans love to follow statistics on the game — and this book compiled by Mr. Sambhudat is a perfect one as such.</p>
+        <p>In this book Mr. Sambhudat has assembled and recorded the most important records in the game in all departments — batting, bowling, wicketkeeping, fielding, all-round, individual and a host of other topics — and I am sure you cricket fans will find it very interesting. Every chapter, the way I see it, is of importance to a cricket fan, and the best part of it is you have all the information right at your finger-tips and all up to date.</p>
+        <p>So my friends, I told you once before, and I am telling you again: these are the kinds of books cricket fans use to question each other about their knowledge of the game — during a match, or over a beer or a drink after a game, or at the local bar.</p>
+        <p>So I highly recommend that you cricket fans secure a copy of both books. I know you will find them to be very interesting and enjoyable.</p>
+      </blockquote>
+      <figcaption>Lance Gibbs <span>West Indies off-spinner · 309 Test wickets</span></figcaption>
+    </figure>
+
+    <!-- About the cover -->
+    <div class="inside-block fade">
+      <h3 class="inside-h">On the cover</h3>
+      <p class="inside-lead">Every Test nation, marked by the year it joined the game's top table — and one of its greatest players.</p>
+      <ul class="cover-legend">
+        <li><span class="cl-flag">Australia <em>1909</em></span><span class="cl-player">Sir Donald Bradman</span><span class="cl-note">Regarded as the best batsman the game has seen — there is no batsman like the Don.</span></li>
+        <li><span class="cl-flag">England <em>1909</em></span><span class="cl-player">Sir Ian Botham</span><span class="cl-note">One of Test cricket's best all-rounders, famed for his performances against Australia in 1981.</span></li>
+        <li><span class="cl-flag">South Africa <em>1909</em></span><span class="cl-player">Graeme Smith</span><span class="cl-note">The only captain to lead his country in over 100 Test matches.</span></li>
+        <li><span class="cl-flag">West Indies <em>1926</em></span><span class="cl-player">Sir Garry Sobers</span><span class="cl-note">The best all-rounder that ever played the game.</span></li>
+        <li><span class="cl-flag">India <em>1926</em></span><span class="cl-player">Sunil Gavaskar</span><span class="cl-note">The first batsman to reach 10,000 Test runs.</span></li>
+        <li><span class="cl-flag">New Zealand <em>1926</em></span><span class="cl-player">Sir Richard Hadlee</span><span class="cl-note">The first bowler to reach 400 Test wickets, and another all-round great.</span></li>
+        <li><span class="cl-flag">Pakistan <em>1952</em></span><span class="cl-player">Imran Khan</span><span class="cl-note">One of Test cricket's finest all-rounders.</span></li>
+        <li><span class="cl-flag">Sri Lanka <em>1981</em></span><span class="cl-player">Muttiah Muralitharan</span><span class="cl-note">Holds the record for the most wickets in Test cricket.</span></li>
+        <li><span class="cl-flag">Zimbabwe <em>1992</em></span><span class="cl-player">Andy Flower</span><span class="cl-note">The only wicketkeeper to score a century in each innings of the same Test.</span></li>
+        <li><span class="cl-flag">Bangladesh <em>2000</em></span><span class="cl-player">Sohag Gazi</span><span class="cl-note">The first player to score a century and take a hat-trick in the same Test match.</span></li>
+        <li><span class="cl-flag">Ireland <em>2017</em></span><span class="cl-player">Kevin O'Brien</span><span class="cl-note">Scored a century on debut in his country's inaugural Test match.</span></li>
+        <li><span class="cl-flag">Afghanistan <em>2017</em></span><span class="cl-player">Hashmatullah Shahidi</span><span class="cl-note">Scored the most runs in his country's debut Test match.</span></li>
+      </ul>
+      <p class="inside-foot">At the centre — the first ever tied Test, West Indies v Australia at Brisbane, December 1960.</p>
+    </div>
+
+    <!-- Table of contents -->
+    <div class="inside-block fade">
+      <h3 class="inside-h">The full table of contents</h3>
+      <p class="inside-lead">From a brief explanation of the game to every flavour of record — batting, bowling, wicketkeeping, fielding, all-round, captaincy and the curiosities in between.</p>
+      <div class="toc">
+        <div class="toc-row"><span class="t">A brief explanation of Test cricket</span><span class="leader"></span><span class="pg">9</span></div>
+        <div class="toc-row toc-head"><span class="t">A few Test cricket controversies</span><span class="leader"></span><span class="pg">11</span></div>
+        <div class="toc-row"><span class="t">The Bodyline Series</span><span class="leader"></span><span class="pg">11</span></div>
+        <div class="toc-row"><span class="t">The Basil D'Oliveira Affair</span><span class="leader"></span><span class="pg">12</span></div>
+        <div class="toc-row"><span class="t">Formation of World Series Cricket (WSC)</span><span class="leader"></span><span class="pg">13</span></div>
+        <div class="toc-row"><span class="t">The Hansie Cronje match-fixing scandal</span><span class="leader"></span><span class="pg">13</span></div>
+        <div class="toc-row"><span class="t">The formation of the Indian Premier League (IPL)</span><span class="leader"></span><span class="pg">13</span></div>
+        <div class="toc-row"><span class="t">One-day cricket — different versions</span><span class="leader"></span><span class="pg">14</span></div>
+        <div class="toc-row toc-head"><span class="t">The 1st ever Test and the 1st ever day/night Test</span><span class="leader"></span><span class="pg">17</span></div>
+        <div class="toc-row"><span class="t">Australia v England, Melbourne, March 1877</span><span class="leader"></span><span class="pg">17</span></div>
+        <div class="toc-row"><span class="t">Australia v New Zealand, Adelaide, November 2015</span><span class="leader"></span><span class="pg">17</span></div>
+        <div class="toc-row"><span class="t">All Test countries' 1st Test — result and summarised scores</span><span class="leader"></span><span class="pg">20</span></div>
+        <div class="toc-row"><span class="t">First Test, and matches played before a first Test win</span><span class="leader"></span><span class="pg">21</span></div>
+        <div class="toc-row"><span class="t">The 1st Test and the 100th for each country, and most matches by a single player in a country's first 100 Tests</span><span class="leader"></span><span class="pg">24</span></div>
+        <div class="toc-row"><span class="t">The first 30 players to appear in 100 Test matches</span><span class="leader"></span><span class="pg">26</span></div>
+        <div class="toc-row"><span class="t">Sir Donald Bradman</span><span class="leader"></span><span class="pg">28</span></div>
+        <div class="toc-row"><span class="t">Sir Garry Sobers</span><span class="leader"></span><span class="pg">52</span></div>
+        <div class="toc-row"><span class="t">Sunil Gavaskar</span><span class="leader"></span><span class="pg">64</span></div>
+        <div class="toc-row"><span class="t">The Magnificent Four — Gavaskar &amp; Border, first two to 10,000 Test runs</span><span class="leader"></span><span class="pg">74</span></div>
+        <div class="toc-row"><span class="t">Sachin Tendulkar</span><span class="leader"></span><span class="pg">88</span></div>
+        <div class="toc-row"><span class="t">The Golden Twins — Steve and Mark Waugh</span><span class="leader"></span><span class="pg">94</span></div>
+        <div class="toc-row"><span class="t">The Magnificent Four — Imran Khan, Richard Hadlee, Ian Botham &amp; Kapil Dev</span><span class="leader"></span><span class="pg">105</span></div>
+        <div class="toc-row"><span class="t">Jacques Kallis</span><span class="leader"></span><span class="pg">107</span></div>
+        <div class="toc-row toc-head"><span class="t">Greatest comeback in Test cricket</span><span class="leader"></span><span class="pg">113</span></div>
+        <div class="toc-row"><span class="t">England v Australia, Headingley, July 1981</span><span class="leader"></span><span class="pg">114</span></div>
+        <div class="toc-row"><span class="t">India v Australia, Kolkata, March 2001</span><span class="leader"></span><span class="pg">114</span></div>
+        <div class="toc-row"><span class="t">Records that may never be broken (or may take a while)</span><span class="leader"></span><span class="pg">117</span></div>
+        <div class="toc-row"><span class="t">Records over a 100 years old</span><span class="leader"></span><span class="pg">118</span></div>
+        <div class="toc-row"><span class="t">Unwanted records</span><span class="leader"></span><span class="pg">127</span></div>
+        <div class="toc-row"><span class="t">Test records held by individuals and Test countries</span><span class="leader"></span><span class="pg">129</span></div>
+        <div class="toc-row"><span class="t">The 1970s</span><span class="leader"></span><span class="pg">133</span></div>
+        <div class="toc-row"><span class="t">Lord's — the Home of Cricket</span><span class="leader"></span><span class="pg">143</span></div>
+        <div class="toc-row toc-head"><span class="t">The African Connection</span><span class="leader"></span><span class="pg">157</span></div>
+        <div class="toc-row"><span class="t">Charlie Llewellyn</span><span class="leader"></span><span class="pg">157</span></div>
+        <div class="toc-row"><span class="t">John Traicos — the man with the rarest achievements in Test cricket</span><span class="leader"></span><span class="pg">159</span></div>
+        <div class="toc-row"><span class="t">Kepler Wessels</span><span class="leader"></span><span class="pg">160</span></div>
+        <div class="toc-row"><span class="t">Makhaya Ntini</span><span class="leader"></span><span class="pg">161</span></div>
+        <div class="toc-row"><span class="t">South Africa v Zimbabwe — first ever Test between two African countries</span><span class="leader"></span><span class="pg">163</span></div>
+        <div class="toc-row"><span class="t">African countries</span><span class="leader"></span><span class="pg">165</span></div>
+        <div class="toc-row"><span class="t">Zimbabwe's historic first Test v India, October 1992</span><span class="leader"></span><span class="pg">167</span></div>
+        <div class="toc-row toc-head"><span class="t">Test cricketers — weights and heights</span><span class="leader"></span><span class="pg">167</span></div>
+        <div class="toc-row"><span class="t">The lightweights, or the bean poles</span><span class="leader"></span><span class="pg">167</span></div>
+        <div class="toc-row"><span class="t">The heavyweights — excess baggage</span><span class="leader"></span><span class="pg">171</span></div>
+        <div class="toc-row"><span class="t">The tallest — head and shoulders above the rest</span><span class="leader"></span><span class="pg">174</span></div>
+        <div class="toc-row"><span class="t">The shortest — good things come in small packages</span><span class="leader"></span><span class="pg">175</span></div>
+        <div class="toc-row toc-head"><span class="t">All about Test debut</span><span class="leader"></span><span class="pg">177</span></div>
+        <div class="toc-row"><span class="t">Players who open the batting and bowling on Test debut</span><span class="leader"></span><span class="pg">217</span></div>
+        <div class="toc-row toc-head"><span class="t">Short topics of interest</span><span class="leader"></span><span class="pg">220</span></div>
+        <div class="toc-row"><span class="t">First to milestones in Tests played — Test #1 to Test #200</span><span class="leader"></span><span class="pg">220</span></div>
+        <div class="toc-row"><span class="t">Test cricket's greatest Test matches</span><span class="leader"></span><span class="pg">221</span></div>
+        <div class="toc-row"><span class="t">One-Test Wonders</span><span class="leader"></span><span class="pg">224</span></div>
+        <div class="toc-row"><span class="t">Follow-on</span><span class="leader"></span><span class="pg">226</span></div>
+        <div class="toc-row"><span class="t">Run out in both innings of a Test</span><span class="leader"></span><span class="pg">228</span></div>
+        <div class="toc-row"><span class="t">Stumped in both innings of a Test</span><span class="leader"></span><span class="pg">229</span></div>
+        <div class="toc-row"><span class="t">Worst start in the 1st innings and won</span><span class="leader"></span><span class="pg">230</span></div>
+        <div class="toc-row"><span class="t">Worst 10-wicket collapses in 4th-innings chases and loss</span><span class="leader"></span><span class="pg">231</span></div>
+        <div class="toc-row"><span class="t">Defending a small total in the 4th innings and won</span><span class="leader"></span><span class="pg">232</span></div>
+        <div class="toc-row"><span class="t">Bowled out twice on the same day</span><span class="leader"></span><span class="pg">232</span></div>
+        <div class="toc-row"><span class="t">Nightwatchman</span><span class="leader"></span><span class="pg">233</span></div>
+        <div class="toc-row"><span class="t">Losing a Test and setting a world record in that defeat</span><span class="leader"></span><span class="pg">234</span></div>
+        <div class="toc-row"><span class="t">The lowest total by a team that still won by an innings</span><span class="leader"></span><span class="pg">234</span></div>
+        <div class="toc-row"><span class="t">The most amazing escape by a batsman</span><span class="leader"></span><span class="pg">234</span></div>
+        <div class="toc-row"><span class="t">Can five batsmen be dismissed by one ball bowled?</span><span class="leader"></span><span class="pg">235</span></div>
+        <div class="toc-row"><span class="t">Some of Test cricket's biggest coincidences</span><span class="leader"></span><span class="pg">235</span></div>
+        <div class="toc-row toc-head"><span class="t">Records</span><span class="leader"></span><span class="pg">236</span></div>
+        <div class="toc-row"><span class="t">Team</span><span class="leader"></span><span class="pg">238</span></div>
+        <div class="toc-row"><span class="t">The 1st tied Test</span><span class="leader"></span><span class="pg">252</span></div>
+        <div class="toc-row"><span class="t">The 2nd tied Test</span><span class="leader"></span><span class="pg">255</span></div>
+        <div class="toc-row"><span class="t">Batting</span><span class="leader"></span><span class="pg">257</span></div>
+        <div class="toc-row"><span class="t">Ducks and pairs</span><span class="leader"></span><span class="pg">285</span></div>
+        <div class="toc-row"><span class="t">Ducks</span><span class="leader"></span><span class="pg">285</span></div>
+        <div class="toc-row"><span class="t">Pairs</span><span class="leader"></span><span class="pg">307</span></div>
+        <div class="toc-row"><span class="t">10's and 11's</span><span class="leader"></span><span class="pg">313</span></div>
+        <div class="toc-row"><span class="t">50's</span><span class="leader"></span><span class="pg">317</span></div>
+        <div class="toc-row"><span class="t">The 90's</span><span class="leader"></span><span class="pg">327</span></div>
+        <div class="toc-row"><span class="t">The 99 Club</span><span class="leader"></span><span class="pg">338</span></div>
+        <div class="toc-row toc-head"><span class="t">All about centuries in Test cricket</span><span class="leader"></span><span class="pg">351</span></div>
+        <div class="toc-row"><span class="t">Centuries at 8, 9 &amp; 10</span><span class="leader"></span><span class="pg">372</span></div>
+        <div class="toc-row"><span class="t">The 190's and 199's</span><span class="leader"></span><span class="pg">393</span></div>
+        <div class="toc-row"><span class="t">All about double-hundreds — the 290's and 299's</span><span class="leader"></span><span class="pg">399</span></div>
+        <div class="toc-row"><span class="t">All about triple-hundreds — the 300 Club and quadruple hundred</span><span class="leader"></span><span class="pg">431</span></div>
+        <div class="toc-row toc-head"><span class="t">Bowling</span><span class="leader"></span><span class="pg">445</span></div>
+        <div class="toc-row"><span class="t">Perfect 10 — Jim Laker and Anil Kumble, all 10 wickets in an innings</span><span class="leader"></span><span class="pg">466</span></div>
+        <div class="toc-row"><span class="t">All-round — players who can make things happen</span><span class="leader"></span><span class="pg">495</span></div>
+        <div class="toc-row"><span class="t">Individual</span><span class="leader"></span><span class="pg">507</span></div>
+        <div class="toc-row"><span class="t">Wicketkeeping — sending batsmen pavilion-bound from behind the stumps</span><span class="leader"></span><span class="pg">516</span></div>
+        <div class="toc-row"><span class="t">Fielding</span><span class="leader"></span><span class="pg">532</span></div>
+        <div class="toc-row"><span class="t">Partnership</span><span class="leader"></span><span class="pg">535</span></div>
+        <div class="toc-row"><span class="t">Captaincy</span><span class="leader"></span><span class="pg">541</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ===================== ABOUT ===================== -->
 <section class="section about" id="about">
   <div class="container about-grid">
@@ -580,6 +763,7 @@ html{scroll-padding-top:90px}
       <h4>The Books</h4>
       <a href="#wi">WI in Test Matches (1928–2013)</a>
       <a href="#tcr">Test Cricket Records (1877–2019)</a>
+      <a href="#inside">Inside the book</a>
       <a href="#about">About the author</a>
       <a href="#contact">Contact &amp; orders</a>
     </div>
