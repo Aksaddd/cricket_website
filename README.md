@@ -74,7 +74,12 @@ SKUs.)
 
 - **Hero** — animated, respects `prefers-reduced-motion`, dims on mobile.
 - **The Books** — both titles with cover galleries (click the thumbnail to flip
-  to the back cover), specs, descriptions, prices and buy buttons.
+  to the back cover; click the cover itself to open a details modal), specs,
+  descriptions, prices and buy buttons.
+- **Inside the Book** — one section per title (`#inside-wi`, `#inside-tcr`) with
+  the Lance Gibbs foreword, the cover/story legend and the full table of
+  contents. The cover-click modal reuses this same markup, so each book keeps a
+  single source of truth.
 - **About Shako** — author bio and an at-a-glance stats panel.
 - **Contact** — email, phone and website.
 
