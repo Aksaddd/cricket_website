@@ -314,7 +314,26 @@ img{max-width:100%}
 .ccard .v a:hover{color:var(--gold-2)}
 
 /* ---------- inside the book ---------- */
-.inside{background:linear-gradient(180deg,var(--pitch-3),var(--pitch-2))}
+.inside{border-top:1px solid rgba(243,234,214,.14)}
+#inside-wi{background:linear-gradient(180deg,var(--pitch-3),var(--pitch-2))}
+#inside-tcr{background:
+  radial-gradient(120% 80% at 12% 0%, rgba(187,51,38,.10), transparent 55%),
+  linear-gradient(180deg,var(--pitch-2),var(--pitch-3))}
+
+/* per-book header so it's clear each book's contents are separate */
+.inside-head{display:flex;align-items:center;gap:clamp(18px,3.4vw,36px)}
+@media(max-width:560px){.inside-head{flex-direction:column;align-items:flex-start;gap:18px}}
+.inside-cover{flex:0 0 auto;width:clamp(88px,12vw,132px);border-radius:4px 9px 9px 4px;overflow:hidden;
+  box-shadow:0 24px 46px -20px rgba(0,0,0,.8),-5px 0 12px -6px rgba(0,0,0,.5);
+  transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.inside-cover:hover{transform:translateY(-4px) rotate(-.5deg)}
+.inside-cover img{display:block;width:100%;height:auto}
+.inside-head-txt{min-width:0}
+.inside-head-txt .eyebrow-2{margin-bottom:12px}
+.inside-head-txt h2{font-family:var(--display);font-weight:500;font-size:clamp(1.7rem,3.6vw,2.6rem);
+  line-height:1.05;letter-spacing:-.02em;color:var(--bone)}
+.inside-head-txt h2 em{font-style:italic;color:var(--gold-2)}
+.inside-head-txt .sub{margin-top:14px}
 .foreword-quote{position:relative;max-width:64em;margin:40px auto 0;
   padding:clamp(28px,4vw,48px);background:rgba(243,234,214,.04);
   border:1px solid rgba(243,234,214,.12);border-radius:18px}
@@ -609,9 +628,20 @@ html{scroll-padding-top:90px}
 <!-- ===================== INSIDE THE BOOK — WI ===================== -->
 <section class="section inside" id="inside-wi">
   <div class="container">
-    <span class="eyebrow-2 fade"><span class="dot"></span> Inside · WI in Test Matches 1928–2013</span>
-    <h2 class="fade">A look between the covers.</h2>
-    <p class="sub fade">A foreword from Lance Gibbs, the story of West Indies cricket and the team like no other, and the full run of chapters — 551 pages and 86 photographs, from the very first West Indies Test in 1928 to the 2013 series in New Zealand.</p>
+    <div class="inside-head fade">
+      <a class="inside-cover" href="#wi" aria-label="Go to WI in Test Matches">
+        <picture>
+          <source srcset="assets/wi-front.webp" type="image/webp">
+          <img src="assets/wi-front.jpg" width="1000" height="1500" loading="lazy" decoding="async"
+               alt="Cover — WI in Test Matches: Facts and Feats 1928–2013">
+        </picture>
+      </a>
+      <div class="inside-head-txt">
+        <span class="eyebrow-2"><span class="dot"></span> Book one of two · Inside</span>
+        <h2>Inside <em>WI in Test Matches</em></h2>
+        <p class="sub">A foreword from Lance Gibbs, the story of West Indies cricket and the team like no other, and the full run of chapters — 551 pages and 86 photographs, from the very first West Indies Test in 1928 to the 2013 series in New Zealand.</p>
+      </div>
+    </div>
     <div class="head-rule fade"></div>
 
     <!-- Foreword by Lance Gibbs -->
@@ -716,9 +746,20 @@ html{scroll-padding-top:90px}
 <!-- ===================== INSIDE THE BOOK — TEST CRICKET RECORDS ===================== -->
 <section class="section inside" id="inside-tcr">
   <div class="container">
-    <span class="eyebrow-2 fade"><span class="dot"></span> Inside · Test Cricket Records 1877–2019</span>
-    <h2 class="fade">A look between the covers.</h2>
-    <p class="sub fade">A foreword from a West Indies great, the story behind the cover, and the full run of chapters — 561 pages of Test cricket, from the very first match to September 2019.</p>
+    <div class="inside-head fade">
+      <a class="inside-cover" href="#tcr" aria-label="Go to Test Cricket Records">
+        <picture>
+          <source srcset="assets/tcr-front.webp" type="image/webp">
+          <img src="assets/tcr-front.jpg" width="1000" height="1500" loading="lazy" decoding="async"
+               alt="Cover — Test Cricket Records from March 1877 – September 2019">
+        </picture>
+      </a>
+      <div class="inside-head-txt">
+        <span class="eyebrow-2"><span class="dot"></span> Book two of two · Inside</span>
+        <h2>Inside <em>Test Cricket Records</em></h2>
+        <p class="sub">A foreword from a West Indies great, the story behind the cover, and the full run of chapters — 561 pages of Test cricket, from the very first match to September 2019.</p>
+      </div>
+    </div>
     <div class="head-rule fade"></div>
 
     <!-- Foreword by Lance Gibbs -->
