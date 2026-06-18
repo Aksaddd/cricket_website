@@ -35,9 +35,38 @@ python3 -m http.server 8000
 
 Drop the repo onto any static host — **GitHub Pages, Netlify, Vercel, or
 Cloudflare Pages** all work with zero configuration. No server or build is
-required. After deploying, replace `https://www.sambhudat.com/` in `index.html`
-(canonical + Open Graph + JSON-LD), `robots.txt`, and `sitemap.xml` with the
-real domain.
+required.
+
+The site's canonical domain is **`https://www.sambhudat.org/`** (used in the
+`index.html` canonical/Open Graph/JSON-LD tags, `robots.txt`, and `sitemap.xml`).
+The domain is registered at **Namecheap**; no `CNAME` file is needed in the repo
+because Vercel/Cloudflare manage the domain from their dashboard.
+
+### Custom domain — Vercel
+
+1. Import this GitHub repo as a Vercel project (Framework preset: **Other**, no
+   build command — it's a static site).
+2. Project → **Settings → Domains**: add both `www.sambhudat.org` and
+   `sambhudat.org`, and set `www` as primary (Vercel will 308-redirect the apex
+   to `www`, matching the Namecheap redirect).
+3. At **Namecheap → Advanced DNS** (delete the apex URL-redirect record first, it
+   conflicts):
+   - **CNAME** — Host `www` → Value `cname.vercel-dns.com.`
+   - **A** — Host `@` → Value `76.76.21.21`
+4. Vercel issues the HTTPS certificate automatically once DNS resolves.
+
+### Custom domain — Cloudflare Pages (alternative)
+
+1. Create a Pages project from this repo (no build command; output dir = repo
+   root).
+2. Pages project → **Custom domains** → add `www.sambhudat.org`.
+3. Easiest path: move the domain's nameservers from Namecheap to Cloudflare
+   (Cloudflare dashboard → Add site → it lists the records and gives you the two
+   nameservers to paste into **Namecheap → Domain → Nameservers → Custom DNS**).
+   Cloudflare then manages DNS and flattens the apex automatically. If you keep
+   DNS at Namecheap instead, add a **CNAME** `www` → `<project>.pages.dev`.
+
+DNS changes can take anywhere from a few minutes to a few hours to propagate.
 
 ## Payments (Stripe)
 
